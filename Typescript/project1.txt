@@ -1,0 +1,16 @@
+create a typescript file and a html file in the correct folder structure.
+
+create a form using the html which will take 
+    1. firstname,
+    2. lastname,
+    3. email,
+    4. gender ( enum )
+    5. age 
+
+create a class for a user.
+
+create a button 
+
+all the data entered in the form should be displayed in the console
+
+follow best pratices 

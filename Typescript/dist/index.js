@@ -84,14 +84,27 @@ console.log(user4);
 const pen1 = 123;
 const add = (num1, num2) => num1 + num2;
 console.log(add(123, 23));
-// classes 
 class Motorcycle {
     constructor(productId, name) {
         this.productID = productId;
         this.name = name;
         // console.log("Hello this message is coming from the contructor");
     }
+    purchase() {
+        return `${this.name} has been purchased by user`;
+    }
 }
 const Himalayan = new Motorcycle(101, "Royal enfield Himalayan");
 const activa = new Motorcycle(102, "Honda Activa");
+console.log(Himalayan.purchase());
+// Himalayan.productID = 105
 console.log(Himalayan, activa);
+class Scooter extends Motorcycle {
+    constructor(ProductId, name, price) {
+        super(ProductId, name);
+        this.price = price;
+    }
+}
+const vespa = new Scooter(102, "Vespa Original", 100000);
+console.log(vespa);
+console.log(vespa.purchase());

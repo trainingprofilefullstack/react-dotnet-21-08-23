@@ -170,8 +170,17 @@ console.log(add(123,23));
 
 // classes 
 
-class Motorcycle {
-    productID: number
+interface CustomerInterface  {
+    id: number,
+    name: string,
+    age: number,
+    purchase(): string
+}
+
+class Motorcycle implements CustomerInterface{
+    private productID: number
+    id: number
+    age: number
     name : string
     brandName: string
     constructor(productId : number, name : string) {
@@ -179,15 +188,34 @@ class Motorcycle {
        this.name = name
        
         // console.log("Hello this message is coming from the contructor");
- 
+    }
+
+    purchase () {
+        return `${this.name} has been purchased by user`
     }
 
 }
 
 const Himalayan = new Motorcycle(101, "Royal enfield Himalayan");
 const activa = new Motorcycle(102, "Honda Activa")
+console.log(Himalayan.purchase());
+
+// Himalayan.productID = 105
+
+
 
 console.log(Himalayan,activa);
 
+class Scooter extends Motorcycle {
+    price : number
 
+    constructor(ProductId: number, name: string , price: number) {
+        super(ProductId,name)
+        this.price = price;
 
+    }
+}
+
+const vespa = new Scooter(102, "Vespa Original", 100000);
+console.log(vespa);
+console.log(vespa.purchase());
