@@ -114,5 +114,80 @@ let companyId = cid as string;
 companyId = "Tata01"
 
 
+// functions 
+
+function productNumbers (num1: number , num2: number) : number {
+    return num1 * num2;
+}
+
+console.log(productNumbers(10,23));
+
+function log( message : string | number) : void{
+    console.log(message);
+    
+}
+console.log(log("Hello world"));
+
+//  interfaces 
+
+
+interface UserInterface  {
+        readonly id: number,
+        name: string,
+        isAdult: boolean,
+        age: number
+    }
+
+const user4 : UserInterface = {
+    id: 123,
+    name:"John",
+    isAdult:false,
+    age : 10
+}
+
+
+// user4.id = 1234;
+
+console.log(user4);
+
+
+type pen = number | string
+const pen1 : pen = 123
+
+
+// functional interfaces 
+
+interface CalcFunction {
+    (num1 : number, num2 : number) : number
+}
+
+
+const add: CalcFunction = ( num1, num2) => num1 + num2
+
+console.log(add(123,23));
+
+
+
+// classes 
+
+class Motorcycle {
+    productID: number
+    name : string
+    brandName: string
+    constructor(productId : number, name : string) {
+       this.productID = productId
+       this.name = name
+       
+        // console.log("Hello this message is coming from the contructor");
+ 
+    }
+
+}
+
+const Himalayan = new Motorcycle(101, "Royal enfield Himalayan");
+const activa = new Motorcycle(102, "Honda Activa")
+
+console.log(Himalayan,activa);
+
 
 

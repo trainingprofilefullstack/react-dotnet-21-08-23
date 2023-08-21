@@ -64,3 +64,34 @@ let customerId = cid;
 customerId = 9;
 let companyId = cid;
 companyId = "Tata01";
+// functions 
+function productNumbers(num1, num2) {
+    return num1 * num2;
+}
+console.log(productNumbers(10, 23));
+function log(message) {
+    console.log(message);
+}
+console.log(log("Hello world"));
+const user4 = {
+    id: 123,
+    name: "John",
+    isAdult: false,
+    age: 10
+};
+// user4.id = 1234;
+console.log(user4);
+const pen1 = 123;
+const add = (num1, num2) => num1 + num2;
+console.log(add(123, 23));
+// classes 
+class Motorcycle {
+    constructor(productId, name) {
+        this.productID = productId;
+        this.name = name;
+        // console.log("Hello this message is coming from the contructor");
+    }
+}
+const Himalayan = new Motorcycle(101, "Royal enfield Himalayan");
+const activa = new Motorcycle(102, "Honda Activa");
+console.log(Himalayan, activa);
