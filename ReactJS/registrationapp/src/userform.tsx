@@ -9,13 +9,13 @@ interface User {
     id:number;
 }
 
-const URL = "http://localhost:5000/users"
+const URL = "http://localhost:5000/users/"
 function Userform(props: any) {
     const [user, setUser] = useState<User>({ // local state files
         name: "",
         age: 0,
         skill: "",
-        id:1
+        id: -1
     })
     const getUsers = async () => {
         try {
@@ -75,6 +75,15 @@ function Userform(props: any) {
         }
     }
 
+
+    async function deleteUser(id: number) {
+        const response = await fetch(URL + id , {
+            method:'delete'
+        });
+        getUsers();
+        
+    }
+
     return (
         <div className='App'>
             <h3>{props.title}</h3>
@@ -85,7 +94,8 @@ function Userform(props: any) {
 
             <ol>
                 {users.map((user) => {
-                    return <li>{user.name} , {user.age}, {user.skill}</li>
+                    return <li>{user.name} , {user.age}, {user.skill}
+                    <button onClick={ () => deleteUser(user.id) }>X</button></li>
                 })}
             </ol>
 
