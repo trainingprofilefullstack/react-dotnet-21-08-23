@@ -29,6 +29,24 @@
       "age": "52",
       "skill": "REACT DEV",
       "id": 5
+    },
+    {
+      "name": "kishor",
+      "age": "50",
+      "skill": "Js dev",
+      "id": 6
+    },
+    {
+      "name": "kishor",
+      "age": "50",
+      "skill": "Js dev",
+      "id": 7
+    },
+    {
+      "name": "kishor",
+      "age": "50",
+      "skill": "Js dev",
+      "id": 8
     }
   ]
 }
