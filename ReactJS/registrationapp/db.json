@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Vikram",
+      "age": 30,
+      "skill": "Fullstack dev"
+    },
+    {
+      "name": "nisha",
+      "age": "23",
+      "skill": "devops",
+      "id": 2
+    },
+    {
+      "name": "nisha",
+      "age": "23",
+      "skill": "devops",
+      "id": 3
+    },
+    {
+      "name": "kumar",
+      "age": "40",
+      "skill": "devops",
+      "id": 4
+    }
+  ]
+}
