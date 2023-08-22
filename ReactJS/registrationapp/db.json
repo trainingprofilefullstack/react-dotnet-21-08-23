@@ -23,6 +23,12 @@
       "age": "40",
       "skill": "devops",
       "id": 4
+    },
+    {
+      "name": "vinY",
+      "age": "52",
+      "skill": "REACT DEV",
+      "id": 5
     }
   ]
 }

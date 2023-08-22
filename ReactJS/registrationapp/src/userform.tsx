@@ -1,4 +1,4 @@
-import { Console, log } from 'console';
+import { Console, error, log } from 'console';
 import './App.css'
 import React, { useState } from 'react'
 
@@ -19,9 +19,9 @@ function Userform(props: any) {
     function updateValue(event: any) {
         setUser({ ...user, [event.target.name]: event.target.value })
     }
-    async function save(event: any) {
+    function save(event: any) {
 
-        try {
+       /* try {
             const response = await fetch('http://localhost:5000/users', {
                 method: 'POST',
                 headers: {
@@ -33,8 +33,25 @@ function Userform(props: any) {
         } catch (error) {
             console.error(error);
 
-        }
+        } */
 
+        try {
+            const promise =  fetch('http://localhost:5000/users', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(user)
+            });
+
+            promise.then((response) => {
+                response.json().then(data => console.log(data));
+            });
+            promise.catch(error => console.log(error));
+        }
+        catch(error) {
+            console.error(error);
+        }
     }
 
     return (
